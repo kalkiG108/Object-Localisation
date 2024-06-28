@@ -17,7 +17,9 @@ DATASET
 -------
 
 MNIST Dataset
-The MNIST dataset consists of 28x28 pixel grayscale images of handwritten digits (0-9). For this project, each digit image is placed on a 75x75 black canvas at random locations to create a custom dataset. The bounding box coordinates for each digit are calculated accordingly.
+The MNIST dataset consists of 28x28 pixel grayscale images of handwritten digits (0-9). For this project, each digit image is placed on a 75x75 black canvas at random locations to create a custom dataset. The bounding box coordinates for each digit are calculated accordingly. (IMAGES OF EXAMPLES OF TRANSFORMED DATA)
+
+Figure 1: Sample images with digits placed at random locations and their corresponding bounding boxes.
 
 MODEL ARCHITECTURE
 ------------------
@@ -65,4 +67,44 @@ The model is trained using the Adam optimizer. The loss function for the classif
 TRAINING AND VALIDATION
 -----------------------
 The dataset is split into training and validation sets. The model is trained for 10 epochs, with the following results:
+
+LOSS CURVES
+Figure 2: Training and validation loss curves for classification and bounding box regression
+
+VALIDATION ACCURACY
+-------------------
+The validation accuracy for the classification task is printed after training.
+
+INTERSECTION OVER UNION (IOU)
+--
+The IOU metric is calculated to evaluate the performance of the bounding box predictions.
+
+IOU RESULTS
+-
+
+Figure 3: Number of predictions with IOU above and below the threshold of 0.6.
+
+PREDICTIONS
+-
+The model's predictions on the validation set are visualized, showing both the predicted and true bounding boxes.
+
+USAGE / REQUIREMENTS
+-
+Python 3.x
+TensorFlow 2.x
+NumPy
+Matplotlib
+TensorFlow Datasets
+Running the Code
+Clone the repository.
+Install the required packages.
+Run the notebook or script to train the model and visualize the results.
+
+CONCLUSION
+-
+This project demonstrates how to build a CNN for both classification and localization tasks using the MNIST dataset. The model achieves good performance in both tasks, showcasing the flexibility and power of deep learning for computer vision applications.
+
+ACKNOWLEDGEMENTS
+-
+This project is based on the TensorFlow and Keras frameworks. Special thanks to the TensorFlow team and the creators of the MNIST dataset.
 
