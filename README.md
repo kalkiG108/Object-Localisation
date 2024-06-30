@@ -84,7 +84,7 @@ The CNN architecture consists of:
 
 - **Convolutional Layers**: Extract features from input images through convolution and pooling operations.
   
-  ![img2]()
+  ![img2](img2.png)
   
   Figure 2. Diagram of CNN Layers
   
