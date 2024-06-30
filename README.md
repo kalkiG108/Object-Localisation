@@ -12,9 +12,8 @@
    - Evaluation
 6. **Implementation**
 7. **Results**
-8. **Practical Advantages**
-9. **Conclusion**
-10. **References**
+8. **Conclusion**
+9. **References**
 ## Overview
 
 This project focuses on developing a Convolutional Neural Network (CNN) for image classification and object localization. The goal is to classify digits within images and accurately localize them by predicting bounding boxes. The model is trained on a synthesized dataset derived from the MNIST dataset, where digits are placed on a black canvas and annotated with bounding box coordinates.
@@ -49,7 +48,7 @@ The model is trained using TensorFlow's distributed training strategies (TPU or 
   - **Classification Accuracy**: Measures the percentage of correctly classified digits.
   - **Bounding Box Accuracy**: Evaluated using Intersection over Union (IoU) to assess the overlap between predicted and true bounding boxes.
 
-# Practical Advantages
+## Practical Advantages
 -**Accurate Digit Localization**: 
 The project excels in accurately localizing digits within images using bounding box predictions. This capability is essential for applications requiring precise object detection and localization, such as Optical Character Recognition (OCR) systems.
 
@@ -113,13 +112,13 @@ model.compile(optimizer='adam',
 -**Training the model**
 model.fit(training_images, training_labels, epochs=10, validation_data=(validation_images, validation_labels))
 
-# Visualizations
+### Visualizations
 Include visualizations of:
 
 -Dataset examples with overlaid bounding boxes.
 -Model architecture (layer diagrams).
 -Training and validation curves (loss and accuracy plots).
-# Results
+## Results
 **Model Performance**
 
 -Accuracy: Achieved classification accuracy on validation set.
@@ -132,7 +131,7 @@ Visualize predictions on sample images:
 -True vs. Predicted bounding boxes.
 -Correct vs. Incorrect classifications.
 
-# Conclusion
+## Conclusion
 Summarizing project achievements, insights gained, and potential future improvements:
 
 -**Achievements**: Successful development of a CNN for image classification and object localization.
@@ -140,6 +139,6 @@ Summarizing project achievements, insights gained, and potential future improvem
 -**Insights**: Understanding of CNN architecture, training strategies, and evaluation metrics.
 
 -**Future Work**: Potential enhancements in model robustness, dataset diversity, and real-world deployment.
-# References
+## References
 TensorFlow Documentation: https://www.tensorflow.org/
 MNIST Dataset Documentation: http://yann.lecun.com/exdb/mnist/
