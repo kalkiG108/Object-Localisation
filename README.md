@@ -1,19 +1,27 @@
 # Image Classification and Object Localization
+
 ## Table of Contents
 
-1. **Overview**
-2. **Description**
-3. **Table of Contents**
-4. **Practical Advantage**
-5. **Methodology**
-   - Data Preprocessing
-   - Model Architecture
-   - Training
-   - Evaluation
-6. **Implementation**
-7. **Results**
-8. **Conclusion**
-9. **References**
+1. [Overview](#overview)
+2. [Description](#description)
+   - [Dataset Synthesis](#dataset-synthesis)
+   - [Model Architecture](#model-architecture)
+   - [Training and Evaluation](#training-and-evaluation)
+3. [Practical Advantages](#practical-advantages)
+4. [Methodology](#methodology)
+   - [Data Preprocessing](#data-preprocessing)
+   - [Model Architecture](#model-architecture-1)
+   - [Training](#training)
+   - [Evaluation](#evaluation)
+5. [Implementation](#implementation)
+   - [Code Snippets](#code-snippets)
+   - [Visualizations](#visualizations)
+6. [Results](#results)
+   - [Model Performance](#model-performance)
+   - [Visual Results](#visual-results)
+7. [Conclusion](#conclusion)
+8. [References](#references)
+
 ## Overview
 
 This project focuses on developing a Convolutional Neural Network (CNN) for image classification and object localization. The goal is to classify digits within images and accurately localize them by predicting bounding boxes. The model is trained on a synthesized dataset derived from the MNIST dataset, where digits are placed on a black canvas and annotated with bounding box coordinates.
@@ -66,6 +74,8 @@ The dataset preprocessing involves:
 - **Image Synthesis**: Overlaying MNIST digits onto black canvases and annotating with bounding boxes.
 - **Normalization**: Scaling pixel values to the range [0, 1] for numerical stability.
 - **Augmentation**: Augmenting data with random transformations to increase robustness.
+
+![Visualize synthesized images with overlaid digits and annotated bounding boxes](https://developer-blogs.nvidia.com/wp-content/uploads/2016/07/detectnet_example.jpeg)  
 
 ### Model Architecture
 
