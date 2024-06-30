@@ -137,6 +137,7 @@ model.fit(training_images, training_labels, epochs=10, validation_data=(validati
 Include visualizations of:
 
 -Dataset examples with overlaid bounding boxes.
+![img3]()
 -Model architecture (layer diagrams).
 -Training and validation curves (loss and accuracy plots).
 ## Results
