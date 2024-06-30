@@ -76,13 +76,18 @@ The dataset preprocessing involves:
 - **Augmentation**: Augmenting data with random transformations to increase robustness.
 
 ![Visualize synthesized images with overlaid digits and annotated bounding boxes](https://developer-blogs.nvidia.com/wp-content/uploads/2016/07/detectnet_example.jpeg)  
-figure 1. Visualize synthesized images with overlaid digits and annotated bounding boxes
+Figure 1. Visualize synthesized images with overlaid digits and annotated bounding boxes
 
 ### Model Architecture
 
 The CNN architecture consists of:
 
 - **Convolutional Layers**: Extract features from input images through convolution and pooling operations.
+  
+  ![img2]()
+  
+  Figure 2. Diagram of CNN Layers
+  
 - **Classification Output**: Softmax activation predicts the digit category.
 - **Bounding Box Regression**: Dense layer outputs coordinates for bounding box prediction.
 
