@@ -50,17 +50,13 @@ The model is trained using TensorFlow's distributed training strategies (TPU or 
   - **Bounding Box Accuracy**: Evaluated using Intersection over Union (IoU) to assess the overlap between predicted and true bounding boxes.
 
 # Practical Advantages
--Accurate Digit Localization: 
--
+-**Accurate Digit Localization**: 
 The project excels in accurately localizing digits within images using bounding box predictions. This capability is essential for applications requiring precise object detection and localization, such as Optical Character Recognition (OCR) systems.
 
--Scalability and Performance: 
--
+-**Scalability and Performance**: 
 Leveraging TensorFlow's distributed training capabilities (TPU or GPU) ensures scalable performance, enabling faster model training and inference. This scalability is critical for handling large datasets and real-time applications.
 
--Versatile Applications: 
--
-The project's methodology and architecture are adaptable to various domains and applications. Beyond digit recognition, the model's ability to localize objects within images can be extended to other object detection tasks in diverse fields like autonomous driving, retail analytics, and surveillance.
+-**Versatile Applications**: The project's methodology and architecture are adaptable to various domains and applications. Beyond digit recognition, the model's ability to localize objects within images can be extended to other object detection tasks in diverse fields like autonomous driving, retail analytics, and surveillance.
 
 ## Methodology
 
@@ -99,8 +95,7 @@ Evaluation metrics include:
 
 ### Code Snippets
 
--Defining and compiling the model
--
+-**Defining and compiling the model**
 model = tf.keras.Sequential([
     tf.keras.layers.Conv2D(16, kernel_size=(3, 3), activation='relu', input_shape=(75, 75, 1)),
     tf.keras.layers.MaxPooling2D(pool_size=(2, 2)),
@@ -115,8 +110,7 @@ model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
--Training the model
--
+-**Training the model**
 model.fit(training_images, training_labels, epochs=10, validation_data=(validation_images, validation_labels))
 
 # Visualizations
@@ -126,12 +120,13 @@ Include visualizations of:
 -Model architecture (layer diagrams).
 -Training and validation curves (loss and accuracy plots).
 # Results
-Model Performance
--
+**Model Performance**
+
 -Accuracy: Achieved classification accuracy on validation set.
 -IoU Scores: IoU scores demonstrating bounding box prediction accuracy.
-Visual Results
--
+
+**Visual Results**
+
 Visualize predictions on sample images:
 
 -True vs. Predicted bounding boxes.
@@ -140,11 +135,11 @@ Visualize predictions on sample images:
 # Conclusion
 Summarizing project achievements, insights gained, and potential future improvements:
 
--Achievements: Successful development of a CNN for image classification and object localization.
+-**Achievements**: Successful development of a CNN for image classification and object localization.
 
--Insights: Understanding of CNN architecture, training strategies, and evaluation metrics.
+-**Insights**: Understanding of CNN architecture, training strategies, and evaluation metrics.
 
--Future Work: Potential enhancements in model robustness, dataset diversity, and real-world deployment.
+-**Future Work**: Potential enhancements in model robustness, dataset diversity, and real-world deployment.
 # References
 TensorFlow Documentation: https://www.tensorflow.org/
 MNIST Dataset Documentation: http://yann.lecun.com/exdb/mnist/
