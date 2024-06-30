@@ -137,9 +137,14 @@ model.fit(training_images, training_labels, epochs=10, validation_data=(validati
 Include visualizations of:
 
 -Dataset examples with overlaid bounding boxes.
-![img3]()
--Model architecture (layer diagrams).
+![img3](https://github.com/kalkiG108/Object-Localisation/blob/main/img3.png?raw=true)
+Figure 3. 
+
 -Training and validation curves (loss and accuracy plots).
+
+![img4](https://github.com/kalkiG108/Object-Localisation/blob/main/img4.png?raw=true)
+
+Figure 4.
 ## Results
 **Model Performance**
 
@@ -152,6 +157,8 @@ Visualize predictions on sample images:
 
 -True vs. Predicted bounding boxes.
 -Correct vs. Incorrect classifications.
+
+![img5](https://github.com/kalkiG108/Object-Localisation/blob/main/img5.png?raw=true)
 
 ## Conclusion
 Summarizing project achievements, insights gained, and potential future improvements:
