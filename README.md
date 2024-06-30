@@ -95,6 +95,7 @@ Evaluation metrics include:
 ### Code Snippets
 
 -**Defining and compiling the model**
+
 model = tf.keras.Sequential([
     tf.keras.layers.Conv2D(16, kernel_size=(3, 3), activation='relu', input_shape=(75, 75, 1)),
     tf.keras.layers.MaxPooling2D(pool_size=(2, 2)),
@@ -110,6 +111,7 @@ model.compile(optimizer='adam',
               metrics=['accuracy'])
 
 -**Training the model**
+
 model.fit(training_images, training_labels, epochs=10, validation_data=(validation_images, validation_labels))
 
 ### Visualizations
@@ -141,4 +143,5 @@ Summarizing project achievements, insights gained, and potential future improvem
 -**Future Work**: Potential enhancements in model robustness, dataset diversity, and real-world deployment.
 ## References
 TensorFlow Documentation: https://www.tensorflow.org/
+
 MNIST Dataset Documentation: http://yann.lecun.com/exdb/mnist/
