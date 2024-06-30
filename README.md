@@ -1,114 +1,88 @@
-# Object-Localisation
-This project involves building a Convolutional Neural Network (CNN) from scratch to perform two tasks using the MNIST dataset:
+# 🏷️ Object Localization Project
 
-1. Classify the main subject (digit) in an image.
-2. Localize the main subject by drawing bounding boxes around it.
+## Overview
+Object localization is a critical task in computer vision where the goal is to identify and locate objects within an image. This project aims to develop and implement a model that can accurately detect and localize objects in various images.
 
-PROJECT OVERVIEW
-----------------
+## Description
+This project focuses on creating an object localization system using deep learning techniques. The model is trained on a dataset of images annotated with bounding boxes around objects. The primary objective is to enhance the accuracy of object detection and localization, which has numerous applications in fields such as autonomous driving, surveillance, and image search engines.
 
-Task 1: Classification
-The model will predict the class of the digit present in the image (0-9).
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Objectives](#objectives)
+3. [Dataset](#dataset)
+4. [Methodology](#methodology)
+   - [Data Preprocessing](#data-preprocessing)
+   - [Model Architecture](#model-architecture)
+   - [Training](#training)
+   - [Evaluation](#evaluation)
+5. [Implementation](#implementation)
+6. [Results](#results)
+7. [Practical Advantages](#practical-advantages)
+8. [Conclusion](#conclusion)
+9. [Future Work](#future-work)
+10. [References](#references)
+11. [Appendix](#appendix)
+   - [Image Links](#image-links)
 
-Task 2: Localization
-The model will predict the bounding box coordinates around the digit. This is modeled as a regression task, where the model outputs numeric values representing the coordinates of the bounding box.
+## Practical Advantages
+Object localization offers several practical advantages:
+- **Enhanced Automation**: Improves the ability of machines to understand and interact with their environment.
+- **Improved Accuracy**: Provides precise object detection which is essential for applications like autonomous vehicles.
+- **Increased Efficiency**: Reduces the need for manual intervention in object detection tasks.
+- **Scalability**: Can be applied to various industries such as healthcare, security, and retail for large-scale object detection.
 
-DATASET
--------
+## Overall Project Description
 
-MNIST Dataset
-The MNIST dataset consists of 28x28 pixel grayscale images of handwritten digits (0-9). For this project, each digit image is placed on a 75x75 black canvas at random locations to create a custom dataset. The bounding box coordinates for each digit are calculated accordingly. (IMAGES OF EXAMPLES OF TRANSFORMED DATA)
+### Introduction
+The introduction provides an overview of object localization, its importance, and its applications. This section sets the context for the project.
 
-Figure 1: Sample images with digits placed at random locations and their corresponding bounding boxes.
+### Objectives
+- Develop a model capable of accurately localizing objects in images.
+- Evaluate the performance of the model using standard metrics.
+- Implement the model in a practical application scenario.
 
-MODEL ARCHITECTURE
-------------------
+### Dataset
+- **Source**: Description of the dataset used, including its source and contents.
+- **Annotation**: Explanation of the annotation process, focusing on bounding boxes.
 
-The model is implemented using TensorFlow and Keras. It consists of three main parts:
+### Methodology
 
-1. Feature Extractor: Convolutional and pooling layers to extract features from the image.
-2. Classifier: Fully connected layers to classify the digit.
-3. Bounding Box Regressor: Fully connected layers to predict the bounding box coordinates.
+#### Data Preprocessing
+Steps taken to prepare the data for training, including normalization, augmentation, and splitting the dataset into training, validation, and test sets.
 
-MODEL SUMMARY
--------------
+#### Model Architecture
+Detailed description of the neural network architecture used for object localization, including layers, activation functions, and other relevant parameters.
 
-Layer (type)                 Output Shape              Param #   
+#### Training
+Explanation of the training process, including the loss function, optimizer, and any regularization techniques applied.
 
-conv2d (Conv2D)              (None, 73, 73, 16)        160       
-_________________________________________________________________
-average_pooling2d (AveragePooling2D)  (None, 36, 36, 16)        0         
-_________________________________________________________________
-conv2d_1 (Conv2D)            (None, 34, 34, 32)        4640      
-_________________________________________________________________
-average_pooling2d_1 (AveragePooling2D)  (None, 17, 17, 32)        0         
-_________________________________________________________________
-conv2d_2 (Conv2D)            (None, 15, 15, 64)        18496     
-_________________________________________________________________
-average_pooling2d_2 (AveragePooling2D)  (None, 7, 7, 64)          0         
-_________________________________________________________________
-flatten (Flatten)            (None, 3136)              0         
-_________________________________________________________________
-dense (Dense)                (None, 128)               401536    
-_________________________________________________________________
-classification (Dense)       (None, 10)                1290      
-_________________________________________________________________
-bounding_box (Dense)         (None, 4)                 516       
+#### Evaluation
+Metrics used to evaluate the model’s performance, such as IoU (Intersection over Union), precision, and recall.
 
-Total params: 426,638
-Trainable params: 426,638
-Non-trainable params: 0
+### Implementation
+Step-by-step guide to implementing the object localization model, including code snippets and explanations.
 
-TRAINING
---------
+### Results
+Presentation of the results obtained from the model, including visualizations of detected objects and performance metrics.
 
-The model is trained using the Adam optimizer. The loss function for the classification task is categorical cross-entropy, and for the bounding box regression task, it is mean squared error (MSE).
+### Practical Advantages
+Detailed discussion of the practical advantages of object localization as outlined above.
 
-TRAINING AND VALIDATION
------------------------
-The dataset is split into training and validation sets. The model is trained for 10 epochs, with the following results:
+### Conclusion
+Summary of the project, its outcomes, and its significance.
 
-LOSS CURVES
-Figure 2: Training and validation loss curves for classification and bounding box regression
+### Future Work
+Suggestions for future improvements and potential extensions of the project.
 
-VALIDATION ACCURACY
--------------------
-The validation accuracy for the classification task is printed after training.
+### References
+1. [Object Detection and Recognition: Theory and Practice](https://link.springer.com/book/10.1007/978-1-4614-3215-7)
+2. [Deep Learning for Computer Vision](https://www.springer.com/gp/book/9783319670483)
+3. [YOLO: You Only Look Once - Real-Time Object Detection](https://arxiv.org/abs/1506.02640)
+4. [SSD: Single Shot MultiBox Detector](https://arxiv.org/abs/1512.02325)
 
-INTERSECTION OVER UNION (IOU)
---
-The IOU metric is calculated to evaluate the performance of the bounding box predictions.
+### Appendix
 
-IOU RESULTS
--
-
-Figure 3: Number of predictions with IOU above and below the threshold of 0.6.
-
-PREDICTIONS
--
-The model's predictions on the validation set are visualized, showing both the predicted and true bounding boxes.
-
-USAGE / REQUIREMENTS
--
-Python 3.x, 
-TensorFlow 2.x, 
-NumPy, 
-Matplotlib, 
-TensorFlow Datasets.
-
-Running the Code.
-
-Clone the repository. 
-
-Installing the required packages.
-
-Runing the notebook or script to train the model and visualize the results.
-
-CONCLUSION
--
-This project demonstrates how to build a CNN for both classification and localization tasks using the MNIST dataset. The model achieves good performance in both tasks, showcasing the flexibility and power of deep learning for computer vision applications.
-
-ACKNOWLEDGEMENTS
--
-This project is based on the TensorFlow and Keras frameworks. Special thanks to the TensorFlow team and the creators of the MNIST dataset.
-
+#### Image Links
+- Example input image: ![link to input image](#)
+- Annotated image: ![link to annotated image](#)
+- Model prediction: ![link to model prediction](#)
