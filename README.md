@@ -96,6 +96,7 @@ Evaluation metrics include:
 
 -**Defining and compiling the model**
 
+```python
 model = tf.keras.Sequential([
     tf.keras.layers.Conv2D(16, kernel_size=(3, 3), activation='relu', input_shape=(75, 75, 1)),
     tf.keras.layers.MaxPooling2D(pool_size=(2, 2)),
@@ -109,6 +110,7 @@ model = tf.keras.Sequential([
 model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
+```
 
 -**Training the model**
 
