@@ -1,4 +1,4 @@
-# Image Classification and Object Localization
+ # Image Classification and Object Localization
 
 ## Table of Contents
 
