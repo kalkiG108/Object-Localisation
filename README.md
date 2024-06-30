@@ -113,8 +113,9 @@ model.compile(optimizer='adam',
 ```
 
 -**Training the model**
-
+```python
 model.fit(training_images, training_labels, epochs=10, validation_data=(validation_images, validation_labels))
+```
 
 ### Visualizations
 Include visualizations of:
