@@ -76,6 +76,7 @@ The dataset preprocessing involves:
 - **Augmentation**: Augmenting data with random transformations to increase robustness.
 
 ![Visualize synthesized images with overlaid digits and annotated bounding boxes](https://developer-blogs.nvidia.com/wp-content/uploads/2016/07/detectnet_example.jpeg)  
+figure 1. Visualize synthesized images with overlaid digits and annotated bounding boxes
 
 ### Model Architecture
 
